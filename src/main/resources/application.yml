@@ -11,6 +11,8 @@ management:
       enabled: true
     env:
       enabled: true
+    git:
+      mode: full
 
   endpoint:
     shutdown:
@@ -25,4 +27,15 @@ management:
     web:
       exposure:
         include: "*"
-#        exclude: "env,beans"
+  #        exclude: "env,beans"
+#      base-path: "/manage"
+#  server:
+#    port: 9292
+
+logging:
+  level:
+    hello.controller: debug
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
